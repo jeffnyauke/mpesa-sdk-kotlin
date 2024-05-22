@@ -23,13 +23,14 @@ reference.
 - 🏦 Account balance
 - 🔁 Transaction reversal
 
-
 ### Supported Platforms:
+
 - jvm
 - android
 - js (IR + Legacy)
     - nodejs
--   - browser
+-
+    - browser
 - iosArm64
 - iosX64
 - iosSimulatorArm64
@@ -46,4 +47,5 @@ reference.
 - mingwX64
 
 [v2 endpoints]: https://developers.meethue.com/develop/hue-api-v2/api-reference/
+
 [docs]: https://shade.lighting/

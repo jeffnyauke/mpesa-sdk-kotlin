@@ -31,7 +31,7 @@ A Kotlin Multiplatform SDK for the Safaricom M-Pesa Daraja 2.0 API.
 
 ```kotlin
 val mpesa = Mpesa("86smaD2TEnlXLVp9yOGvBiA9Znd3iHh3", "utbzOaE5a0LZFGB2")
-val response = mpesa.stkPush(
+val response = mpesa.initiateStkPush(
     "174379",
     "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919",
     CustomerPayBillOnline,
@@ -47,7 +47,8 @@ val response = mpesa.stkPush(
 
 ## Adding to your project
 
-The library is available on Maven Central. Latest version [![Maven Central](https://img.shields.io/maven-central/v/com.github.jeffnyauke/mpesa-sdk-kotlin?color=blue)](https://search.maven.org/search?q=g:com.github.jeffnyauke.mpesa)
+The library is available on Maven Central. Latest
+version [![Maven Central](https://img.shields.io/maven-central/v/com.github.jeffnyauke/mpesa-sdk-kotlin?color=blue)](https://search.maven.org/search?q=g:com.github.jeffnyauke.mpesa)
 
 ### Gradle
 
@@ -80,7 +81,14 @@ sourceSets {
 ```
 
 ## Contributing 🤝
-Please feel free to [open an issue](https://github.com/jeffnyauke/mpesa-sdk-kotlin/issues/new/choose) if you have any questions or suggestions. Or participate in the [discussion](https://github.com/jeffnyauke/mpesa-kmp-library/discussions). If you want to contribute, please read the [contribution guidelines](https://github.com/jeffnyauke/mpesa-kmp-library/blob/main/CONTRIBUTING.md) for more information.
+
+Please feel free
+to [open an issue](https://github.com/jeffnyauke/mpesa-sdk-kotlin/issues/new/choose) if you have any
+questions or suggestions. Or participate in
+the [discussion](https://github.com/jeffnyauke/mpesa-kmp-library/discussions). If you want to
+contribute, please read
+the [contribution guidelines](https://github.com/jeffnyauke/mpesa-kmp-library/blob/main/CONTRIBUTING.md)
+for more information.
 
 ## License 📃
 
