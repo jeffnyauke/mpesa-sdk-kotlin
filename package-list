@@ -1,0 +1,10 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+
+module:mpesa
+com.github.jeffnyauke.mpesa
+com.github.jeffnyauke.mpesa.config
+com.github.jeffnyauke.mpesa.exception
+com.github.jeffnyauke.mpesa.network
+com.github.jeffnyauke.mpesa.request
+com.github.jeffnyauke.mpesa.response
