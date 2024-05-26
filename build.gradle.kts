@@ -38,11 +38,13 @@ nexusPublishing.repositories {
 
 mavenPublishing {
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
-    configure(KotlinMultiplatform(
-        javadocJar = JavadocJar.Dokka("dokkaHtml"),
-        sourcesJar = true,
-        androidVariantsToPublish = listOf("debug", "release")
-    ))
+    configure(
+        KotlinMultiplatform(
+            javadocJar = JavadocJar.Dokka("dokkaHtml"),
+            sourcesJar = true,
+            androidVariantsToPublish = listOf("debug", "release")
+        )
+    )
     signAllPublications()
 }
 
