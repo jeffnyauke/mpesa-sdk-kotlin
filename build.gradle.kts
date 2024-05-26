@@ -1,3 +1,7 @@
+import com.vanniktech.maven.publish.JavadocJar
+import com.vanniktech.maven.publish.KotlinMultiplatform
+import com.vanniktech.maven.publish.SonatypeHost
+
 /*
  * Copyright (c) 2024 Jeffrey Nyauke
  *
@@ -16,6 +20,7 @@
 
 plugins {
     alias(libs.plugins.nexus.publish)
+    alias(libs.plugins.maven.publish)
     id("convention.versions")
     id("convention.git-hooks")
     id("convention.kotlin-mpp-tier3")
@@ -29,6 +34,16 @@ nexusPublishing.repositories {
         nexusUrl by uri("https://s01.oss.sonatype.org/service/local/")
         snapshotRepositoryUrl by uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
     }
+}
+
+mavenPublishing {
+    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
+    configure(KotlinMultiplatform(
+        javadocJar = JavadocJar.Dokka("dokkaHtml"),
+        sourcesJar = true,
+        androidVariantsToPublish = listOf("debug", "release")
+    ))
+    signAllPublications()
 }
 
 kotlin {

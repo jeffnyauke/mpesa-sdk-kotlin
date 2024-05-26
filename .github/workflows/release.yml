@@ -134,8 +134,8 @@ jobs:
       ORG_GRADLE_PROJECT_signingKey: ${{ secrets.SIGNING_KEY }}
       ORG_GRADLE_PROJECT_signingKeyId: ${{ secrets.SIGNING_KEY_ID }}
       ORG_GRADLE_PROJECT_signingPassword: ${{ secrets.SIGNING_PASSWORD }}
-      ORG_GRADLE_PROJECT_sonatypeUsername: ${{ secrets.SONATYPE_USERNAME }}
-      ORG_GRADLE_PROJECT_sonatypePassword: ${{ secrets.SONATYPE_PASSWORD }}
+      ORG_GRADLE_PROJECT_mavenCentralUsername: ${{ secrets.SONATYPE_USERNAME }}
+      ORG_GRADLE_PROJECT_mavenCentralPassword: ${{ secrets.SONATYPE_PASSWORD }}
     strategy:
       matrix:
         repository:
@@ -143,9 +143,7 @@ jobs:
             tasks: publishAllPublicationsToGitHubRepository
             enabled: ${{ github.event.inputs.skipGitHub != 'y' }}
           - name: Maven Central
-            # Requires to manually release a new version on https://s01.oss.sonatype.org/#stagingRepositories
-            # If you're brave, you could change it to `publishToSonatype closeAndReleaseSonatypeStagingRepository` to fully automate the release
-            tasks: publishToSonatype closeSonatypeStagingRepository
+            tasks: publishAndReleaseToMavenCentral --no-configuration-cache
             enabled: ${{ github.event.inputs.skipMavenCentral != 'y' }}
         os:
           - runner: macos-latest

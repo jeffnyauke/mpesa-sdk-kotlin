@@ -30,7 +30,8 @@ infix fun <T> Property<T>.by(value: Provider<T>) = set(value)
 
 object Git {
     val headCommitHash by lazy {
-        val child = Runtime.getRuntime().exec("git rev-parse --verify HEAD")
+        val processBuilder = ProcessBuilder("git", "rev-parse", "--verify", "HEAD")
+        val child = processBuilder.start()
         child.waitFor()
         child.inputStream.readAllBytes().toString(Charset.defaultCharset()).trim()
     }
