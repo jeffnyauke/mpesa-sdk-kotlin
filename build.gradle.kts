@@ -1,3 +1,7 @@
+import com.vanniktech.maven.publish.JavadocJar
+import com.vanniktech.maven.publish.KotlinMultiplatform
+import com.vanniktech.maven.publish.SonatypeHost
+
 /*
  * Copyright (c) 2024 Jeffrey Nyauke
  *
@@ -16,6 +20,7 @@
 
 plugins {
     alias(libs.plugins.nexus.publish)
+    alias(libs.plugins.maven.publish)
     id("convention.versions")
     id("convention.git-hooks")
     id("convention.kotlin-mpp-tier3")
@@ -28,6 +33,48 @@ nexusPublishing.repositories {
     sonatype {
         nexusUrl by uri("https://s01.oss.sonatype.org/service/local/")
         snapshotRepositoryUrl by uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
+    }
+}
+
+mavenPublishing {
+    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
+    configure(
+        KotlinMultiplatform(
+            javadocJar = JavadocJar.Dokka("dokkaHtml"),
+            sourcesJar = true,
+            androidVariantsToPublish = listOf("debug", "release")
+        )
+    )
+    signAllPublications()
+    val ghOwnerId: String = project.properties["gh.owner.id"]!!.toString()
+    val ghOwnerName: String = project.properties["gh.owner.name"]!!.toString()
+    val ghOwnerEmail: String = project.properties["gh.owner.email"]!!.toString()
+    pom {
+        name by project.name
+        url by "https://github.com/$ghOwnerId/${rootProject.name}"
+        description by provider { project.description }
+
+        licenses {
+            license {
+                name by "The Apache License, Version 2.0"
+                url by "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        }
+
+        developers {
+            developer {
+                id by ghOwnerId
+                name by ghOwnerName
+                email by ghOwnerEmail
+            }
+        }
+
+        scm {
+            connection by "scm:git:git://github.com:$ghOwnerId/${rootProject.name}.git"
+            developerConnection.set("scm:git:git@github.com:$ghOwnerId/${rootProject.name}.git")
+            url by "https://github.com/$ghOwnerId/${rootProject.name}.git"
+            tag by Git.headCommitHash
+        }
     }
 }
 
