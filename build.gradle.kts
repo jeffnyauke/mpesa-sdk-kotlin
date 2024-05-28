@@ -19,7 +19,6 @@ import com.vanniktech.maven.publish.SonatypeHost
  */
 
 plugins {
-    alias(libs.plugins.nexus.publish)
     alias(libs.plugins.maven.publish)
     id("convention.versions")
     id("convention.git-hooks")
@@ -29,22 +28,8 @@ plugins {
     id("convention.publishing-mpp")
 }
 
-nexusPublishing.repositories {
-    sonatype {
-        nexusUrl by uri("https://s01.oss.sonatype.org/service/local/")
-        snapshotRepositoryUrl by uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
-    }
-}
-
 mavenPublishing {
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
-    configure(
-        KotlinMultiplatform(
-            javadocJar = JavadocJar.Dokka("dokkaHtml"),
-            sourcesJar = true,
-            androidVariantsToPublish = listOf("debug", "release")
-        )
-    )
     signAllPublications()
     val ghOwnerId: String = project.properties["gh.owner.id"]!!.toString()
     val ghOwnerName: String = project.properties["gh.owner.name"]!!.toString()
