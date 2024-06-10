@@ -6,11 +6,11 @@
 
 ## Introduction
 
-This SDK provides a convenient way to interact with the **Safaricom M-Pesa Daraja API v2.0** from your projects.
+This SDK provides a convenient way to interact with the Safaricom **M-Pesa Daraja API v2.0** from your projects.
 
-### Features:
+**Features**
 
-* Supports all major Daraja API **endpoints**, including:
+* Supports all major Daraja API endpoints, including:
     * 🤳 Dynamic QR
     * 💶 STK Push - Lipa na M-Pesa Online API (M-PESA express)
     * ⏳ STK Push query
@@ -20,7 +20,7 @@ This SDK provides a convenient way to interact with the **Safaricom M-Pesa Daraj
     * ⏳ Transaction status
     * 🏦 Account balance
     * 🔁 Transaction reversal
-* Built with **Kotlin Multiplatform**, allowing you to use the same codebase across different platforms (Android, iOS, JVM, JS, Native).
+* Built with **Kotlin Multiplatform**, allowing you to use the same codebase across different platforms.
 * Provides a **simple** and **intuitive** API surface.
 * Handles **authentication** and **token management**.
 
@@ -30,21 +30,19 @@ For detailed documentation, API reference, and usage examples, please visit the 
 
 ## Installation
 
-The library is available on Maven Central. Latest version [![Maven Central](https://img.shields.io/maven-central/v/com.github.jeffnyauke/mpesa-sdk-kotlin?color=blue)](https://search.maven.org/search?q=g:com.github.jeffnyauke.mpesa)
-
 ```kotlin
 dependencies {
     implementation("io.github.jeffnyauke:mpesa:x.y.z")
 }
 ```
 
-## Quick Start
+## At a Glance
 
 ```kotlin
 val mpesa = Mpesa(
     consumerKey = "YOUR_CONSUMER_KEY",
     consumerSecret = "YOUR_CONSUMER_SECRET",
-    environment = Environment.SANDBOX // or Environment.PRODUCTION
+    environment = Environment.SANDBOX
 )
 
 val stkPushRequest = StkPushRequest(
@@ -64,7 +62,9 @@ val response = mpesa.initiateStkPush(stkPushRequest)
 
 println("Response: $response")
 ```
-Replace the placeholders with your actual values.
+
+> [!NOTE]
+> Replace the placeholders with your actual values.
 
 ## Contributing
 
