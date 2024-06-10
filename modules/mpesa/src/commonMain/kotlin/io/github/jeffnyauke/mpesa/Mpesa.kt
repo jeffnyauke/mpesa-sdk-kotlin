@@ -16,6 +16,7 @@
 
 package io.github.jeffnyauke.mpesa
 
+import io.github.jeffnyauke.mpesa.client.HttpClientFactory
 import io.github.jeffnyauke.mpesa.config.Constants.Endpoints.ACCOUNT_BALANCE
 import io.github.jeffnyauke.mpesa.config.Constants.Endpoints.B2C
 import io.github.jeffnyauke.mpesa.config.Constants.Endpoints.C2B
@@ -25,7 +26,6 @@ import io.github.jeffnyauke.mpesa.config.Constants.Endpoints.STK_PUSH
 import io.github.jeffnyauke.mpesa.config.Constants.Endpoints.STK_PUSH_QUERY
 import io.github.jeffnyauke.mpesa.config.Constants.Endpoints.TRANSACTION_REVERSAL
 import io.github.jeffnyauke.mpesa.config.Constants.Endpoints.TRANSACTION_STATUS
-import io.github.jeffnyauke.mpesa.client.HttpClientFactory
 import io.github.jeffnyauke.mpesa.config.Environment
 import io.github.jeffnyauke.mpesa.config.Environment.PRODUCTION
 import io.github.jeffnyauke.mpesa.config.Environment.SANDBOX
