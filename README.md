@@ -1,4 +1,4 @@
-![Banner](/docs/Writerside/images/mpesa_sdk_kotlin_white.png)
+![M-Pesa SDK Kotlin Banner](/docs/Writerside/images/mpesa_sdk_kotlin_white.png)
 [![Build](https://github.com/jeffnyauke/mpesa-sdk-kotlin/actions/workflows/check.yml/badge.svg)](https://github.com/jeffnyauke/mpesa-kmp-library/actions/workflows/check.yml)
 [![Kotlin](https://img.shields.io/badge/kotlin-1.9.22-blue.svg?logo=kotlin)](http://kotlinlang.org)
 [![GitHub License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0)
@@ -6,11 +6,11 @@
 
 ## Introduction
 
-This SDK provides a convenient way to interact with the **Safaricom M-Pesa Daraja API v2.0** from your Kotlin Multiplatform projects.
+This SDK provides a convenient way to interact with the **Safaricom M-Pesa Daraja API v2.0** from your projects.
 
-**Features:**
+### Features:
 
-* Supports all major Daraja API endpoints, including:
+* Supports all major Daraja API **endpoints**, including:
     * 🤳 Dynamic QR
     * 💶 STK Push - Lipa na M-Pesa Online API (M-PESA express)
     * ⏳ STK Push query
@@ -20,8 +20,8 @@ This SDK provides a convenient way to interact with the **Safaricom M-Pesa Daraj
     * ⏳ Transaction status
     * 🏦 Account balance
     * 🔁 Transaction reversal
-* Built with **Kotlin Multiplatfor**m, allowing you to use the same codebase across different platforms (Android, iOS, JVM, JS, Native).
-* Provides a simple and intuitive API surface.
+* Built with **Kotlin Multiplatform**, allowing you to use the same codebase across different platforms (Android, iOS, JVM, JS, Native).
+* Provides a **simple** and **intuitive** API surface.
 * Handles **authentication** and **token management**.
 
 ## Documentation
