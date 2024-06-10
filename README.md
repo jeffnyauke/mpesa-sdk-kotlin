@@ -1,19 +1,28 @@
-# M-Pesa SDK Kotlin
 ![Banner](/docs/Writerside/images/mpesa_sdk_kotlin_white.png)
 [![Build](https://github.com/jeffnyauke/mpesa-sdk-kotlin/actions/workflows/check.yml/badge.svg)](https://github.com/jeffnyauke/mpesa-kmp-library/actions/workflows/check.yml)
 [![Kotlin](https://img.shields.io/badge/kotlin-1.9.22-blue.svg?logo=kotlin)](http://kotlinlang.org)
 [![GitHub License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0)
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.jeffnyauke/mpesa-sdk-kotlin?color=blue)](https://search.maven.org/search?q=g:io.github.jeffnyauke.mpesa)
-![badge-android](http://img.shields.io/badge/platform-android-6EDB8D.svg?style=flat)
-![badge-ios](http://img.shields.io/badge/platform-ios-CDCDCD.svg?style=flat)
-![badge-mac](http://img.shields.io/badge/platform-macos-111111.svg?style=flat)
-![badge-watchos](http://img.shields.io/badge/platform-watchos-C0C0C0.svg?style=flat)
-![badge-tvos](http://img.shields.io/badge/platform-tvos-808080.svg?style=flat)
-![badge-jvm](http://img.shields.io/badge/platform-jvm-DB413D.svg?style=flat)
-![badge-linux](http://img.shields.io/badge/platform-linux-2D3F6C.svg?style=flat)
-![badge-windows](http://img.shields.io/badge/platform-windows-4D76CD.svg?style=flat)
-![badge-nodejs](https://img.shields.io/badge/platform-jsNode-F8DB5D.svg?style=flat)
-![badge-browser](https://img.shields.io/badge/platform-jsBrowser-F8DB5D.svg?style=flat)
+
+[//]: # (![badge-android]&#40;http://img.shields.io/badge/platform-android-6EDB8D.svg?style=flat&#41;)
+
+[//]: # (![badge-ios]&#40;http://img.shields.io/badge/platform-ios-CDCDCD.svg?style=flat&#41;)
+
+[//]: # (![badge-mac]&#40;http://img.shields.io/badge/platform-macos-111111.svg?style=flat&#41;)
+
+[//]: # (![badge-watchos]&#40;http://img.shields.io/badge/platform-watchos-C0C0C0.svg?style=flat&#41;)
+
+[//]: # (![badge-tvos]&#40;http://img.shields.io/badge/platform-tvos-808080.svg?style=flat&#41;)
+
+[//]: # (![badge-jvm]&#40;http://img.shields.io/badge/platform-jvm-DB413D.svg?style=flat&#41;)
+
+[//]: # (![badge-linux]&#40;http://img.shields.io/badge/platform-linux-2D3F6C.svg?style=flat&#41;)
+
+[//]: # (![badge-windows]&#40;http://img.shields.io/badge/platform-windows-4D76CD.svg?style=flat&#41;)
+
+[//]: # (![badge-nodejs]&#40;https://img.shields.io/badge/platform-jsNode-F8DB5D.svg?style=flat&#41;)
+
+[//]: # (![badge-browser]&#40;https://img.shields.io/badge/platform-jsBrowser-F8DB5D.svg?style=flat&#41;)
 
 ## Introduction
 
