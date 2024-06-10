@@ -35,7 +35,6 @@ kotlin {
                 implementation(libs.ktor.client.serialization)
                 implementation(libs.ktor.client.negotiation)
                 implementation(libs.ktor.serialization.json)
-                implementation(libs.cache4k)
                 implementation(libs.kermit)
             }
         }

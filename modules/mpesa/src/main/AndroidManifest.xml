@@ -14,4 +14,4 @@
   ~ limitations under the License.
   -->
 
-<manifest package="com.github.jeffnyauke.mpesa" />
+<manifest package="io.github.jeffnyauke.mpesa" />

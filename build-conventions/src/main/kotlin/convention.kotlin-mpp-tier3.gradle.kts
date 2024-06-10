@@ -20,20 +20,19 @@ plugins {
 
 // https://kotlinlang.org/docs/native-target-support.html#tier-3
 kotlin {
-//  @OptIn(ExperimentalWasmDsl::class)
-//  wasm {
-//    browser {
-//      commonWebpackConfig {
-//        cssSupport { enabled.set(true) }
-//        scssSupport { enabled.set(true) }
-//      }
-//      testTask {
-//        useKarma {
-//          useChrome()
+//    @OptIn(ExperimentalWasmDsl::class) wasmJs {
+//        browser {
+//            commonWebpackConfig {
+//                cssSupport { enabled.set(true) }
+//                scssSupport { enabled.set(true) }
+//            }
+//            testTask {
+//                useKarma {
+//                    useChrome()
+//                }
+//            }
 //        }
-//      }
 //    }
-//  }
     // androidNativeArm32()
     // androidNativeArm64()
     // androidNativeX86()
