@@ -4,29 +4,9 @@
 [![GitHub License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0)
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.jeffnyauke/mpesa-sdk-kotlin?color=blue)](https://search.maven.org/search?q=g:io.github.jeffnyauke.mpesa)
 
-[//]: # (![badge-android]&#40;http://img.shields.io/badge/platform-android-6EDB8D.svg?style=flat&#41;)
-
-[//]: # (![badge-ios]&#40;http://img.shields.io/badge/platform-ios-CDCDCD.svg?style=flat&#41;)
-
-[//]: # (![badge-mac]&#40;http://img.shields.io/badge/platform-macos-111111.svg?style=flat&#41;)
-
-[//]: # (![badge-watchos]&#40;http://img.shields.io/badge/platform-watchos-C0C0C0.svg?style=flat&#41;)
-
-[//]: # (![badge-tvos]&#40;http://img.shields.io/badge/platform-tvos-808080.svg?style=flat&#41;)
-
-[//]: # (![badge-jvm]&#40;http://img.shields.io/badge/platform-jvm-DB413D.svg?style=flat&#41;)
-
-[//]: # (![badge-linux]&#40;http://img.shields.io/badge/platform-linux-2D3F6C.svg?style=flat&#41;)
-
-[//]: # (![badge-windows]&#40;http://img.shields.io/badge/platform-windows-4D76CD.svg?style=flat&#41;)
-
-[//]: # (![badge-nodejs]&#40;https://img.shields.io/badge/platform-jsNode-F8DB5D.svg?style=flat&#41;)
-
-[//]: # (![badge-browser]&#40;https://img.shields.io/badge/platform-jsBrowser-F8DB5D.svg?style=flat&#41;)
-
 ## Introduction
 
-This SDK provides a convenient way to interact with the Safaricom M-Pesa Daraja API v2.0 from your Kotlin Multiplatform projects.
+This SDK provides a convenient way to interact with the **Safaricom M-Pesa Daraja API v2.0** from your Kotlin Multiplatform projects.
 
 **Features:**
 
@@ -40,9 +20,9 @@ This SDK provides a convenient way to interact with the Safaricom M-Pesa Daraja 
     * ⏳ Transaction status
     * 🏦 Account balance
     * 🔁 Transaction reversal
-* Built with Kotlin Multiplatform, allowing you to use the same codebase across different platforms (Android, iOS, JVM, JS, Native).
+* Built with **Kotlin Multiplatfor**m, allowing you to use the same codebase across different platforms (Android, iOS, JVM, JS, Native).
 * Provides a simple and intuitive API surface.
-* Handles authentication and token management.
+* Handles **authentication** and **token management**.
 
 ## Documentation
 
