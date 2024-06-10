@@ -1,7 +1,8 @@
+![Banner](/docs/Writerside/images/mpesa_sdk_kotlin.png)
 [![Build](https://github.com/jeffnyauke/mpesa-sdk-kotlin/actions/workflows/check.yml/badge.svg)](https://github.com/jeffnyauke/mpesa-kmp-library/actions/workflows/check.yml)
 [![Kotlin](https://img.shields.io/badge/kotlin-1.9.22-blue.svg?logo=kotlin)](http://kotlinlang.org)
 [![GitHub License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0)
-[![Maven Central](https://img.shields.io/maven-central/v/com.github.jeffnyauke/mpesa-sdk-kotlin?color=blue)](https://search.maven.org/search?q=g:com.github.jeffnyauke.mpesa)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.jeffnyauke/mpesa-sdk-kotlin?color=blue)](https://search.maven.org/search?q=g:io.github.jeffnyauke.mpesa)
 ![badge-android](http://img.shields.io/badge/platform-android-6EDB8D.svg?style=flat)
 ![badge-ios](http://img.shields.io/badge/platform-ios-CDCDCD.svg?style=flat)
 ![badge-mac](http://img.shields.io/badge/platform-macos-111111.svg?style=flat)
@@ -13,9 +14,11 @@
 ![badge-nodejs](https://img.shields.io/badge/platform-jsNode-F8DB5D.svg?style=flat)
 ![badge-browser](https://img.shields.io/badge/platform-jsBrowser-F8DB5D.svg?style=flat)
 
-A Kotlin Multiplatform SDK for the Safaricom M-Pesa Daraja 2.0 API.
+## Introduction
 
-## Supported features:
+This SDK provides a convenient way to interact with the Safaricom M-Pesa Daraja API v2.0 from your Kotlin Multiplatform projects.
+
+**Features:**
 
 - 🤳 Dynamic QR
 - 💶 STK Push - Lipa na M-Pesa Online API (M-PESA express)
@@ -27,60 +30,48 @@ A Kotlin Multiplatform SDK for the Safaricom M-Pesa Daraja 2.0 API.
 - 🏦 Account balance
 - 🔁 Transaction reversal
 
-## At a glace
+## Documentation
 
-```kotlin
-val mpesa = Mpesa("86smaD2TEnlXLVp9yOGvBiA9Znd3iHh3", "utbzOaE5a0LZFGB2")
-val response = mpesa.initiateStkPush(
-    "174379",
-    "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919",
-    CustomerPayBillOnline,
-    "1",
-    "254708374149",
-    "254708374149",
-    "174379",
-    "https://mydomain.com/path",
-    "CompanyXLTD",
-    "Payment of X",
-)
-```
+For detailed documentation, API reference, and usage examples, please visit the [official website](https://jeffnyauke.github.io/mpesa-sdk-kotlin/).
 
-## Adding to your project
+## Installation
 
-The library is available on Maven Central. Latest
-version [![Maven Central](https://img.shields.io/maven-central/v/com.github.jeffnyauke/mpesa-sdk-kotlin?color=blue)](https://search.maven.org/search?q=g:com.github.jeffnyauke.mpesa)
-
-### Gradle
-
-Add the Maven Central repository if it is not already there.
-
-```kotlin
-repositories { 
-  mavenCentral()
-}
-```
-
-To use the library in a single-platform project, add a dependency.
+The library is available on Maven Central. Latest version [![Maven Central](https://img.shields.io/maven-central/v/com.github.jeffnyauke/mpesa-sdk-kotlin?color=blue)](https://search.maven.org/search?q=g:com.github.jeffnyauke.mpesa)
 
 ```kotlin
 dependencies {
-    implementation("com.github.jeffnyauke:mpesa:<version>")
+    implementation("io.github.jeffnyauke:mpesa:x.y.z")
 }
 ```
 
-In Kotlin Multiplatform projects, add the dependency to your `commonMain` source-set dependencies.
+## At a glace
 
 ```kotlin
-sourceSets {
-  val commonMain by getting { 
-    dependencies { 
-      implementation("com.github.jeffnyauke:mpesa:<version>") 
-    } 
-  }
-}
+val mpesa = Mpesa(
+    consumerKey = "YOUR_CONSUMER_KEY",
+    consumerSecret = "YOUR_CONSUMER_SECRET",
+    environment = Environment.SANDBOX // or Environment.PRODUCTION
+)
+
+val stkPushRequest = StkPushRequest(
+    businessShortCode = "YOUR_SHORTCODE",
+    passKey = "YOUR_PASSKEY",
+    transactionType = StkPushTransactionType.CustomerPayBillOnline,
+    amount = "1",
+    phoneNumber = "2547XXXXXXXX",
+    partyA = "2547XXXXXXXX",
+    partyB = "YOUR_SHORTCODE",
+    callBackUrl = "https://your-callback-url.com/mpesa",
+    accountReference = "YOUR_ACCOUNT_REFERENCE",
+    transactionDesc = "Payment for something",
+)
+
+val response = mpesa.initiateStkPush(stkPushRequest)
+
+println("Response: $response")
 ```
 
-## Contributing 🤝
+## Contributing
 
 Please feel free
 to [open an issue](https://github.com/jeffnyauke/mpesa-sdk-kotlin/issues/new/choose) if you have any
@@ -90,11 +81,11 @@ contribute, please read
 the [contribution guidelines](https://github.com/jeffnyauke/mpesa-kmp-library/blob/main/CONTRIBUTING.md)
 for more information.
 
-## License 📃
+## License
 
 **mpesa-sdk-kotlin** is distributed under the terms of the Apache License (Version 2.0). See the
 [license](LICENSE) for more information.
 
-## Trademarks ™️
+## Trademarks
 
 M-PESA is a trademark of Vodafone Group Plc. and is not affiliated with this project.

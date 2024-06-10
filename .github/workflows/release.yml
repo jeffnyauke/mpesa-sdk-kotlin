@@ -95,8 +95,8 @@ jobs:
           VERSION=${VERSION:=${{ github.event.inputs.version }}}
           echo "VERSION=${VERSION/v}" >> $GITHUB_ENV
 
-      - name: Gradle Assemble Publications
-        run: ./gradlew publishToMavenLocal --scan
+#      - name: Gradle Assemble Publications
+#        run: ./gradlew publishToMavenLocal --scan
 
       - name: Gradle Check
         run: ./gradlew check --scan

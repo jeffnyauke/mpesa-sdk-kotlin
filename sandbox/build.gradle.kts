@@ -16,18 +16,18 @@
 
 plugins {
     id("convention.jvm")
-    kotlin("jvm") version libs.versions.kotlin.get()
+    kotlin("jvm") version "1.9.23"
     application
 }
 
-description = "Local consumer sandbox"
+description = "JVM Sample"
 
 application {
-    mainClass.set("com.github.jeffnyauke.mpesa.sandbox.MainKt")
+    mainClass.set("io.github.jeffnyauke.mpesa.samples.jvm.MainKt")
 }
 
 dependencies {
     implementation(libs.kotlinx.coroutines.core)
-    implementation("com.github.jeffnyauke:mpesa")
-    testImplementation("com.github.jeffnyauke:test-utils")
+    implementation("io.github.jeffnyauke:mpesa")
+    testImplementation("io.github.jeffnyauke:test-utils")
 }
