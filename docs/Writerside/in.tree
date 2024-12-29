@@ -4,12 +4,11 @@
 
 <instance-profile id="in"
                  name="mpesa-sdk-kotlin"
-                 start-page="starter.md">
+                 start-page="Getting-Started.md">
 
-    <toc-element topic="starter.md"/>
-    <toc-element topic="How-to.md"/>
-    <toc-element topic="Overview.md"/>
-    <toc-element topic="Tutorial.md">
-        <toc-element topic="Installation.md"/>
+    <toc-element topic="Getting-Started.md">
     </toc-element>
+    <toc-element topic="Using-the-SDK.md"/>
+    <toc-element topic="Overview.md"/>
+    <toc-element topic="starter.md"/>
 </instance-profile>

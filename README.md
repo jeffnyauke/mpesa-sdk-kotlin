@@ -36,7 +36,7 @@ dependencies {
 }
 ```
 
-## At a Glance
+## Quick Start
 
 ```kotlin
 val mpesa = Mpesa(
