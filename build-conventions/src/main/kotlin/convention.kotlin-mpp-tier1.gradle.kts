@@ -20,7 +20,7 @@ plugins {
 
 // https://kotlinlang.org/docs/native-target-support.html#tier-1
 kotlin {
-    // linuxX64()
+    linuxX64()
 
     macosX64()
     macosArm64()

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="in"
+                 name="mpesa-sdk-kotlin"
+                 start-page="Getting-Started.md">
+
+    <toc-element topic="Getting-Started.md">
+    </toc-element>
+    <toc-element topic="Using-the-SDK.md"/>
+    <toc-element topic="Overview.md"/>
+    <toc-element topic="starter.md"/>
+</instance-profile>

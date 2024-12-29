@@ -41,6 +41,7 @@ rootProject.name = "mpesa-sdk-kotlin"
 
 includeBuild("./build-conventions/")
 includeBuild("./sandbox/")
+includeBuild("./samples/java/")
 
 include(
     ":modules:mpesa",
